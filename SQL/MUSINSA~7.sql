@@ -1,0 +1,49 @@
+SELECT A.ORD_NO,
+       B.ORD_DATE, 
+       D.MEM_ID,
+       C.PROD_NAME,
+       C.PROD_COST    
+  FROM DEORDER A, ORDERS B, PROD_BOARD C, MEMBER D
+ WHERE A.ORD_NO = B.ORD_NO
+   AND A.PROD_NO = C.PROD_NO
+   AND B.MEM_ID = D.MEM_ID
+   AND B.MEM_ID = 'abc123';
+   
+INSERT INTO DEORDER(PROD_NO, ORD_NO, DEORDER_QTY)
+SELECT 1000000001, ORD_NO 
+   
+alter table REVIEW add PROD_NO VARCHAR2(10);
+alter table REVIEW add foreign key(PROD_NO) references PROD_BOARD(PROD_NO);
+
+alter table QNA add PROD_NO VARCHAR2(10);
+alter table QNA add foreign key(PROD_NO) references PROD_BOARD(PROD_NO);
+
+COMMIT;
+       
+    INSERT INTO REVIEW(REV_NO,REV_TITLE,REV_CONTENT,REV_DATE,REV_STAR) 
+    VALUES((SELECT NVL(MAX(REV_NO), 0) + 1 FROM REVIEW),'만족','대만족 재구매의사 백프로 ㅎㅎ',SYSDATE,5);   
+    
+    
+SELECT B.REV_NO AS 리뷰번호, 
+       D.MEM_ID AS 회원아이디, 
+       C.PROD_NO AS 상품번호, 
+       A.PROD_NAME AS 상품명, 
+       B.REV_TITLE AS 리뷰제목, 
+       B.REV_DATE AS 작성일자
+  FROM PROD_BOARD A, REVIEW B, DEORDER C, MEMBER D
+ WHERE B.MEM_ID = D.MEM_ID
+   AND A.PROD_NO = B.PROD_NO
+   AND A.PROD_NO = C.PROD_NO
+   AND D.MEM_ID = 'abc123';
+   
+   
+UPDATE REVIEW SET REV_TITLE = '안녕' , REV_CONTENT = '좋아' , REV_STAR = 1
+ WHERE REV_NO = 2 AND MEM_ID = 'abc123';
+ commit;
+ 
+DELETE FROM REVIEW
+ WHERE REV_NO = 2
+   AND MEM_ID = 'abc123';
+ 
+ 
+ 
