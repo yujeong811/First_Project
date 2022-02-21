@@ -1,0 +1,104 @@
+package util;
+
+public interface View {
+
+	// interface에서 선언한 변수는 값이 변하지 않는 상수
+	int HOME = 0;
+	int LOGIN = 1;
+	int JOIN = 2;
+	int MAIN = 3;
+	int MY_PAGE = 4;
+	int MY_INFO = 5;
+	int MY_INFOLIST = 6;
+	int MY_GRADE = 7;
+	int MY_ORDERLIST = 8;
+	int INFO_UPDATE = 9;
+	int PROD_HOME = 10;
+	int NOTICE = 11;
+	int QNA = 12;
+	int LOGOUT = 13;
+	int MY_MILE = 14;
+	int MY_COUPON = 15;
+	int REVIEW = 16; //주문내역 > 리뷰
+	int MY_REVIEW = 17; //내가 쓴 리뷰
+	int MY_REVIEW_DETAIL = 18; //내가 쓴 리뷰 목록 조회
+	int MY_REVIEW_UPDATE = 19; //내가 쓴 리뷰 > 수정
+	int MY_REVIEW_DELETE = 20; //내가 쓴 리뷰 > 삭제
+	
+	int PROD_SEARCH = 21;
+	int PROD_RANKING = 22;
+	
+	int PROD_REVIEW_DDETAIL = 87;
+	
+	int MY_REVIEWLIST = 23;
+	int DE_ORDERLIST = 24;
+	int MY_REVIEW_DDETAIL = 25;
+	
+	int MY_NOTICE = 27;
+	int MY_QNA = 28;
+	int QNA_UPDATE = 29;
+	int QNA_DELETE = 30;
+	
+	int PAY_TYPE = 31;
+	int PAY_REFUND = 100; //환불
+	
+	int ADMIN_LOGIN = 26;
+	int ADMIN_MAIN = 32;
+	
+	int	ADMIN_MEMREAD = 33;
+	int ADMIN_MEMEVENT = 34;
+	int	ADMIN_PMANAGE = 35;
+	int	ADMIN_NOTICE = 36;
+	int	ADMIN_QNA = 37;
+	int ADMIN_NOTICELIST = 38;
+	int ADMIN_NOTICELIST_DETAIL = 39;
+	int ADMIN_NOTICELIST_UPDATE = 40;
+	int ADMIN_NOTICELIST_DELETE = 41;
+	int	ADMIN_MEMREADDE = 42;
+	int ADMIN_PROD_INSERT = 43;
+	int ADMIN_PROD_UPDATE = 44;
+	int ADMIN_PROD_DELETE = 45;
+	int ADMIN_PROD_SELECT = 46;
+	int ADMIN_PROD_INSERT_OUTER = 47;
+	int ADMIN_PROD_INSERT_TOP = 48;
+	int ADMIN_PROD_INSERT_BOTTOM = 49;
+	int ADMIN_PROD_INSERT_SHOES = 50;
+	int PROD_CART = 51;
+	int PROD_PBOARD = 52;
+	int PROD_SEARCHLIST = 53;
+	int PROD_DETAIL = 54;
+	int PROD_RANKBOARD = 55;
+//	int PROD_RANKDETAIL = 56;
+	int PAY_DEORDER = 57;
+	int ADMIN_PROD_OUTER = 58;
+	int ADMIN_PROD_TOP = 59;
+	int ADMIN_PROD_BOTTOM = 60;
+	int ADMIN_PROD_SHOES = 61;
+	int ADMIN_SEARCH = 62;
+	int ADMIN_PROD_UPDATE_OUTER = 63;
+	int ADMIN_PROD_UPDATE_TOP = 64;
+	int ADMIN_PROD_UPDATE_BOTTOM = 65;
+	int ADMIN_PROD_UPDATE_SHOES = 66;
+	int ADMIN_PROD_DELETE_OUTER = 67;
+	int ADMIN_PROD_DELETE_TOP = 68;
+	int ADMIN_PROD_DELETE_BOTTOM = 69;
+	int ADMIN_PROD_DELETE_SHOES = 70;
+	int PROD_UPDATERANK = 71;
+	int CART_DELETE = 72;
+	int CART_DELETE_ALL = 73;
+	int PAY_CARD = 74;
+	int PAY_CASH = 75;
+	int PAYMENT = 76;
+	int ADMIN_QNA_SEARCH = 77;
+	int ADMIN_QNA_REPLY = 78;
+	int ADMIN_QNA_UPDATE = 79;
+	int PROD_QNA = 80;
+	int PROD_QNA_CHOICE = 81;
+	int PROD_QNA_LIST = 82;
+	int PROD_QNA_SEARCH = 83;
+	int PROD_QNA_UPDATE = 84;
+	int PROD_QNA_DELETE = 85;
+	int PROD_REVIEW_DETAIL = 86;
+	int ADMIN_GRADE = 88;
+//	int ADMIN_MILE = 89;
+}
